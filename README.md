@@ -7,9 +7,11 @@
     <strong> :dart: Dart toolkit for the GitHub GraphQL API :dart: </strong>
   </p>
 
-  <p>
+  <span>
     <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/vincenzopalazzo/octokit.dart/graphql%20Test%20case?style=flat-square">
-  </p>
+    <img alt="Pub Version" src="https://img.shields.io/pub/v/octokit?style=flat-square"/>    
+    <img alt="Pub Version (including pre-releases)" src="https://img.shields.io/pub/v/octokit?include_prereleases&label=beta&style=flat-square">
+  </span>
 
   <h4>
     <a href="https://github.com/vincenzopalazzo/octokit.dart">Project Homepage</a>
