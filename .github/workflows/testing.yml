@@ -15,5 +15,4 @@ jobs:
           dart pub get
       - name: Source code test
         run: |
-          dart run build_runner build
           dart test .

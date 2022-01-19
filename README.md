@@ -1,39 +1,73 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+<div align="center">
+  <h1>octokit.dart</h1>
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+  <img src="https://github.com/vincenzopalazzo/octokit.dart/blob/main/docs/logo.png" />
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+  <p>
+    <strong> :dart: Dart toolkit for the GitHub GraphQL API :dart: </strong>
+  </p>
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+  <p>
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/vincenzopalazzo/octokit.dart/graphql%20Test%20case?style=flat-square">
+  </p>
 
-## Features
+  <h4>
+    <a href="https://github.com/vincenzopalazzo/octokit.dart">Project Homepage</a>
+  </h4>
+</div>
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Table of Content
+
+- Introduction
+- Getting started
+- Usage
+- License
+
+## Introduction
+
+[Github API v4](https://docs.github.com/en/graphql) dart wrapper to interact with Github in your application with dart and flutter.
+
+The library is flexible and provide all what the user need, all the feature that are supported and will be supported are listed below:
+
+- [X] Raw GraphQL query and mutation
+- [ ] Autogenerate the query from a .graphql file and work with dart object in your app
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+TODO: 
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+## Raw Query
 
 ```dart
-const like = 'sample';
+import 'dart:io';
+
+import 'package:octokit/octokit.dart';
+
+void main() async {
+  var sysEnv = Platform.environment;
+  var token = sysEnv["GITHUB_TOKEN"]!;
+  GithubClient client = GithubClient(token: token);
+  var query = r'''
+        query {
+           viewer { 
+              __typename
+              login
+            }
+        }
+        ''';
+  var response =
+  await client.rawQuery(queryDefinition: query, queryName: "viewer");
+  print(response);
+}
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+This package is a designed to be auto managed be the end user, in fact this package give the API to work with
+code generation from graphql schema, so you can implement your custom query on your client and handle all with the 
+API provided by octokit.dart
+
+## License
+TODO

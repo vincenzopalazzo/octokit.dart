@@ -1,8 +1,6 @@
-/// Support for doing something awesome.
+/// octokit core implementation of the Github Graph QL client
 ///
-/// More dartdocs go here.
+/// author: https://github.com/vincenzopalazzo
 library octokit;
 
 export 'src/octokit_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
