@@ -34,7 +34,25 @@ The library is flexible and provide all what the user need, all the feature that
 
 ## Getting started
 
-TODO: 
+### Dart
+```bash
+dart pub add octokit
+```
+
+### Flutter
+
+```bash
+flutter pub add octokit
+```
+
+or add this line to your pubspec.yaml
+
+```yaml
+dependencies:
+  octokit: ^0.0.1
+```
+
+For the Usage see the next section!
 
 ## Usage
 
