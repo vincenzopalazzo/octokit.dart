@@ -20,3 +20,6 @@ jobs:
         run: |
           dart analyze lib
           dart analyze test
+      - name: Build Package
+        run: |
+          dart run build_runner build

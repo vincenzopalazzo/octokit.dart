@@ -5,15 +5,19 @@ PROBLEM=
 
 default: fmt
 
-get:
+dep:
 	$(CC) pub get
 
 fmt:
 	$(CC) $(FMT) .
 	$(CC) analyze .
 
+gen:
+	$(CC) run build_runner build
+
 clean:
-	@echo "nothing here"
+	rm lib/src/**/*.g.dart
+	rm lib/src/**/*.gql.dart
 
 check:
 	$(CC) test
