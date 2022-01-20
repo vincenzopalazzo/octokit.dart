@@ -184,19 +184,88 @@ const QUERY_LAST_COMMITS = const DocumentNode(definitions: [
                                                                                           directives: [],
                                                                                           selectionSet: SelectionSetNode(selections: [
                                                                                             FieldNode(name: NameNode(value: 'name'), alias: null, arguments: [], directives: [], selectionSet: null),
-                                                                                            FieldNode(name: NameNode(value: 'email'), alias: null, arguments: [], directives: [], selectionSet: null)
-                                                                                          ]))
-                                                                                    ]))
-                                                                              ]))
-                                                                        ]))
-                                                              ]))
-                                                    ]))
-                                          ]))
-                                    ]))
-                              ]))
-                        ]))
-                  ]))
-            ]))
+                                                                                            FieldNode(name: NameNode(value: 'email'), alias: null, arguments: [], directives: [], selectionSet: null),
+                                                                                            FieldNode(name: NameNode(value: '__typename'), alias: null, arguments: [], directives: [], selectionSet: null)
+                                                                                          ])),
+                                                                                      FieldNode(name: NameNode(value: '__typename'), alias: null, arguments: [], directives: [], selectionSet: null)
+                                                                                    ])),
+                                                                                FieldNode(name: NameNode(value: '__typename'), alias: null, arguments: [], directives: [], selectionSet: null)
+                                                                              ])),
+                                                                          FieldNode(
+                                                                              name: NameNode(value: '__typename'),
+                                                                              alias: null,
+                                                                              arguments: [],
+                                                                              directives: [],
+                                                                              selectionSet: null)
+                                                                        ])),
+                                                                FieldNode(
+                                                                    name: NameNode(
+                                                                        value:
+                                                                            '__typename'),
+                                                                    alias: null,
+                                                                    arguments: [],
+                                                                    directives: [],
+                                                                    selectionSet:
+                                                                        null)
+                                                              ])),
+                                                      FieldNode(
+                                                          name: NameNode(
+                                                              value:
+                                                                  '__typename'),
+                                                          alias: null,
+                                                          arguments: [],
+                                                          directives: [],
+                                                          selectionSet: null)
+                                                    ])),
+                                            FieldNode(
+                                                name: NameNode(
+                                                    value: '__typename'),
+                                                alias: null,
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null)
+                                          ])),
+                                      FieldNode(
+                                          name: NameNode(value: '__typename'),
+                                          alias: null,
+                                          arguments: [],
+                                          directives: [],
+                                          selectionSet: null)
+                                    ])),
+                                FieldNode(
+                                    name: NameNode(value: '__typename'),
+                                    alias: null,
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: null)
+                              ])),
+                          FieldNode(
+                              name: NameNode(value: '__typename'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null)
+                        ])),
+                    FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null)
+                  ])),
+              FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null)
+            ])),
+        FieldNode(
+            name: NameNode(value: '__typename'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null)
       ])),
 ]);
 
@@ -348,8 +417,16 @@ class QueryLastCommits$repository$refs$edges$node$target
 
   @override
   factory QueryLastCommits$repository$refs$edges$node$target.fromJson(
-          Map<String, dynamic> json) =>
-      _$QueryLastCommits$repository$refs$edges$node$targetFromJson(json);
+      Map<String, dynamic> json) {
+    switch (json["__typename"] as String) {
+      case "Commit":
+        return QueryLastCommits$repository$refs$edges$node$target$Commit
+            .fromJson(json);
+      default:
+        return _$QueryLastCommits$repository$refs$edges$node$targetFromJson(
+            json);
+    }
+  }
 
   @override
   Map<String, dynamic> toJson() =>

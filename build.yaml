@@ -3,5 +3,6 @@ targets:
     builders:
       graphql_codegen:
         options:
+          addTypename: true
           clients:
             - graphql
