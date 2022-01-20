@@ -48,4 +48,27 @@ class GithubClient {
     }
     return response.data!;
   }
+
+  /// Function that give you the possibility to run a query
+  /// and get the response decoded directly in the Object
+  /// from JSON.
+  Future<Map<String, dynamic>> query({required QueryOptions query}) async {
+    var response = await _client.query(query);
+    if (response.hasException) {
+      throw Exception(response.exception);
+    }
+    return response.data!;
+  }
+
+  /// Function that give you the possibility to run a mutation
+  /// get the response in the Object deserialized from
+  /// JSON.
+  Future<Map<String, dynamic>> mutate(
+      {required MutationOptions mutation}) async {
+    var response = await _client.mutate(mutation);
+    if (response.hasException) {
+      throw Exception(response.exception);
+    }
+    return response.data!;
+  }
 }

@@ -1,0 +1,33 @@
+query LastCommits($repo: String!, $owner: String!) {
+  repository(name: $repo, owner: $owner) {
+   refs(refPrefix: "refs/heads/",  orderBy: {direction: DESC, field: TAG_COMMIT_DATE}, last: 100) {
+    edges {
+      node {
+          ... on Ref {
+            name
+            target {
+              ... on Commit {
+                history(first: 2) {
+                  edges {
+                    node {
+                      ... on Commit {
+                        committedDate
+                        commitUrl
+                        messageHeadline
+                        messageBody
+                        author {
+                          name
+                          email
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
+  }
+  }
+}

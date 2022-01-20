@@ -16,8 +16,8 @@ gen:
 	$(CC) run build_runner build
 
 clean:
-	rm lib/src/**/*.g.dart
-	rm lib/src/**/*.gql.dart
+	find . -name "*.graphql.dart" -type f -delete
+	find . -name "*.graphql.g.dart" -type f -delete
 
 check:
 	$(CC) test
