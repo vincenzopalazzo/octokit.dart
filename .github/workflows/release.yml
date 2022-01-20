@@ -15,5 +15,7 @@ jobs:
         with:
           credential: ${{ secrets.CREDENTIAL_JSON }}
           flutter_package: false
-          skip_test: true
-          dry_run: true
+          skip_test: false
+          dry_run: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.TEST_TOKEN }}
