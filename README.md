@@ -1,7 +1,7 @@
 <div align="center">
   <h1>octokit.dart</h1>
 
-  <img src="https://github.com/vincenzopalazzo/octokit.dart/blob/main/docs/logo.png" />
+  <img src="https://github.com/vincenzopalazzo/octokit.dart/blob/main/doc/logo.png" />
 
   <p>
     <strong> :dart: Dart toolkit for the GitHub GraphQL API :dart: </strong>
