@@ -32,7 +32,7 @@
 The library is flexible and provide all what the user need, all the feature that are supported and will be supported are listed below:
 
 - [X] Raw GraphQL query and mutation
-- [ ] Autogenerate the query from a .graphql file and work with dart object in your app
+- [X] Autogenerate the query from a .graphql file and work with dart object in your app
 
 ## Getting started
 
