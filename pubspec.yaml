@@ -1,6 +1,6 @@
 name: octokit
 description: Dart toolkit for the GitHub GraphQL API.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/vincenzopalazzo/octokit.dart
 
 environment:
