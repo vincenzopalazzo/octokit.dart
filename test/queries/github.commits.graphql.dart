@@ -269,7 +269,8 @@ const QUERY_LAST_COMMITS = const DocumentNode(definitions: [
       ])),
 ]);
 
-class GQLOptionsQueryLastCommits extends graphql.QueryOptions {
+class GQLOptionsQueryLastCommits
+    extends graphql.QueryOptions<QueryLastCommits> {
   GQLOptionsQueryLastCommits(
       {String? operationName,
       required VariablesQueryLastCommits variables,
@@ -288,10 +289,12 @@ class GQLOptionsQueryLastCommits extends graphql.QueryOptions {
             optimisticResult: optimisticResult,
             pollInterval: pollInterval,
             context: context,
-            document: QUERY_LAST_COMMITS);
+            document: QUERY_LAST_COMMITS,
+            parserFn: (data) => QueryLastCommits.fromJson(data));
 }
 
-class GQLWatchOptionsQueryLastCommits extends graphql.WatchQueryOptions {
+class GQLWatchOptionsQueryLastCommits
+    extends graphql.WatchQueryOptions<QueryLastCommits> {
   GQLWatchOptionsQueryLastCommits(
       {String? operationName,
       required VariablesQueryLastCommits variables,
@@ -316,7 +319,8 @@ class GQLWatchOptionsQueryLastCommits extends graphql.WatchQueryOptions {
             pollInterval: pollInterval,
             eagerlyFetchResults: eagerlyFetchResults,
             carryForwardDataOnException: carryForwardDataOnException,
-            fetchResults: fetchResults);
+            fetchResults: fetchResults,
+            parserFn: (data) => QueryLastCommits.fromJson(data));
 }
 
 class GQLFetchMoreOptionsQueryLastCommits extends graphql.FetchMoreOptions {
@@ -330,19 +334,12 @@ class GQLFetchMoreOptionsQueryLastCommits extends graphql.FetchMoreOptions {
 }
 
 extension GQLExtensionQueryLastCommits on graphql.GraphQLClient {
-  Future<graphql.QueryResult> queryLastCommits(
+  Future<graphql.QueryResult<QueryLastCommits>> queryLastCommits(
           GQLOptionsQueryLastCommits options) async =>
       await this.query(options);
-  graphql.ObservableQuery watchQueryLastCommits(
+  graphql.ObservableQuery<QueryLastCommits> watchQueryLastCommits(
           GQLWatchOptionsQueryLastCommits options) =>
       this.watchQuery(options);
-}
-
-extension GQLResultExtensionQueryLastCommits on graphql.QueryResult {
-  QueryLastCommits? get parsedDataQueryLastCommits {
-    final data = this.data;
-    return data == null ? null : QueryLastCommits.fromJson(data);
-  }
 }
 
 @JsonSerializable()

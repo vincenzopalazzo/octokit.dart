@@ -1,5 +1,4 @@
 analyzer:
   exclude:
-    - 'example/*'
     - '**/*.graphql.dart'
     - '**/*.graphql.g.dart'

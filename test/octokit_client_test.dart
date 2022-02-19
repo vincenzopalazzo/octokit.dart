@@ -40,7 +40,7 @@ void main() {
       });
       var response = await rawClient.query(query);
       var edges = response.data!["repository"]!["refs"]!["edges"]!;
-      expect(edges.length, 1);
+      expect(edges.length >= 1, isTrue);
       edges.forEach((element) {
         expect(element["node"], isNotNull);
       });
@@ -52,7 +52,7 @@ void main() {
               variables: VariablesQueryLastCommits(
                   owner: "vincenzopalazzo", repo: "octokit.dart")));
       var query = QueryLastCommits.fromJson(response);
-      expect(query.repository!.refs!.edges!.length, 1);
+      expect(query.repository!.refs!.edges!.length >= 1, isTrue);
       query.repository!.refs!.edges!.forEach((element) {
         expect(element!.node, isNotNull);
       });

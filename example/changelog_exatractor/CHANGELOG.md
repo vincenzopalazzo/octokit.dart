@@ -1,0 +1,18 @@
+## v0.0.1
+- ci: update release workflow. Made by @vincenzopalazzo in 2022-01-20
+- changelog: add changelog for version 0.0.2. Made by @vincenzopalazzo in 2022-01-20
+- codegen: fixed the bug with the code gen. Made by @vincenzopalazzo in 2022-01-20
+- Update README.md. Made by @vincenzopalazzo in 2022-01-20
+- ci: skip auto generated file. Made by @vincenzopalazzo in 2022-01-20
+- test: reproduce the bug in the code generator. Made by @vincenzopalazzo in 2022-01-20
+- client: introduce the possibility to run a graphql_flutter query. Made by @vincenzopalazzo in 2022-01-20
+- doc: update readme. Made by @vincenzopalazzo in 2022-01-19
+- doc: renaming directory. Made by @vincenzopalazzo in 2022-01-19
+- doc: update readme. Made by @vincenzopalazzo in 2022-01-19
+- ci: add env token regarding the API. Made by @vincenzopalazzo in 2022-01-19
+- package: add license. Made by @vincenzopalazzo in 2022-01-19
+- client: implementin the first draft API. Made by @vincenzopalazzo in 2022-01-19
+- octakit: start to generate code from github schema. Made by @vincenzopalazzo in 2022-01-19
+- ci: adding dart workflow. Made by @vincenzopalazzo in 2022-01-17
+- package: init dart package structure. Made by @vincenzopalazzo in 2022-01-17
+- Initial commit. Made by @vincenzopalazzo in 2022-01-17
