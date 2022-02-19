@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'schema.docs.graphql.dart';
+part of 'github.schema.graphql.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

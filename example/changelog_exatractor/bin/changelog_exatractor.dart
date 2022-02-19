@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:changelog_exatractor/query/get_commits_history.graphql.dart';
+import 'package:changelog_exatractor/query/get_commits_history.graphqls.dart';
 import 'package:octokit/octokit.dart';
 
 void storeCommits(

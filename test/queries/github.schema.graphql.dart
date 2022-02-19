@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-part 'schema.docs.graphql.g.dart';
+part 'github.schema.graphql.g.dart';
 
 @JsonSerializable()
 class InputAcceptEnterpriseAdministratorInvitationInput
