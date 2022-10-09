@@ -18,7 +18,7 @@ class GithubClient {
     _client = GraphQLClient(link: link, cache: cache ?? GraphQLCache());
   }
 
-  /// Make a raw query by passing the query definition inside a query
+  /// Make a raw query by passing the query string as parameter.
   Future<Map<String, dynamic>> rawQuery(
       {required String queryDefinition,
       Map<String, dynamic> variable = const {},
@@ -35,6 +35,7 @@ class GithubClient {
     return response.data!;
   }
 
+  /// Make a raw query by passing the query string as parameter.
   Future<Map<String, dynamic>> rawMutation(
       {required String mutationDefinition,
       Map<String, dynamic> variable = const {},
@@ -49,8 +50,7 @@ class GithubClient {
     return response.data!;
   }
 
-  /// Function that give you the possibility to run a query
-  /// and get the response decoded directly in the Object
+  /// Run a query and get the response decoded directly in the Object
   /// from JSON.
   Future<Map<String, dynamic>> query({required QueryOptions query}) async {
     var response = await _client.query(query);
@@ -60,8 +60,7 @@ class GithubClient {
     return response.data!;
   }
 
-  /// Function that give you the possibility to run a mutation
-  /// get the response in the Object deserialized from
+  /// Run a mutation get the response in the Object deserialized from
   /// JSON.
   Future<Map<String, dynamic>> mutate(
       {required MutationOptions mutation}) async {

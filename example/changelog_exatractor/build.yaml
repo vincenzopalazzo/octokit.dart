@@ -3,7 +3,7 @@ targets:
     builders:
       graphql_codegen:
         options:
-          assetPath: "/**.graphqls"
-          addTypename: true
-          clients:
-            - graphql
+            assetsPath: "lib/query/*.graphqls"
+            addTypename: true
+            clients:
+                - graphql
