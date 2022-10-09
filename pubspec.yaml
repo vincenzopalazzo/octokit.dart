@@ -1,5 +1,5 @@
 name: octokit
-description: Dart toolkit for the GitHub GraphQL API.
+description: Dart toolkit for the GitHub GraphQL API to run autogenerate GraphQL query.
 version: 0.0.3
 homepage: https://github.com/vincenzopalazzo/octokit.dart
 
@@ -11,13 +11,12 @@ false_secrets:
 
 dependencies:
   graphql: ^5.0.1
-  json_annotation: ^4.0.1
+  json_annotation: ^4.6.0
 
 dev_dependencies:
   lints: ^1.0.0
   test: ^1.16.0
-  json_serializable: ^4.1.2
-  graphql_codegen: ^0.6.0
+  json_serializable: ^6.1.5
+  graphql_codegen: ^0.11.0
   build_runner: ^2.0.3
-  ## TO remove
   gql: ^0.13.0
