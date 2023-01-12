@@ -1,0 +1,16 @@
+{
+    "package_name": "octokit.dart",
+    "version": "v0.0.4",
+    "api": {
+        "name": "github",
+        "repository": "vincenzopalazzo/octokit.dart",
+        "branch": "macros/upgrade-graphql"
+    },
+    "generation_method": {
+        "name": "semver-v2",
+        "header_filter": true
+    },
+    "serialization_method": {
+        "name": "md"
+    }
+}
