@@ -1,3 +1,9 @@
+# v0.0.4
+
+## Fixed
+- upgrade grahqlflutter ([commit](https://github.com/vincenzopalazzo/octokit.dart/commit/98d540c2e9dcf1ef81d040264e97a81c13f344f3)). @vincenzopalazzo 12-01-2023
+
+
 ## 0.0.1
 
 - Initial version.
